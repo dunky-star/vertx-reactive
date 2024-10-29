@@ -1,1 +1,3 @@
 start.vertx.io
+
+https://logging.apache.org/  --> For Logging in Vert.x
