@@ -17,6 +17,7 @@ public class RequestResponseExample {
   static class RequestVerticle extends AbstractVerticle {
 
     private static final Logger LOG = LoggerFactory.getLogger(RequestVerticle.class);
+    static final String ADDRESS = "my.request.address";
 
     @Override
     public void start(final Promise<Void> startPromise) throws Exception {
@@ -24,8 +25,8 @@ public class RequestResponseExample {
       var eventBus = vertx.eventBus();
       final String message = "Hello first message over event bus";
       LOG.debug("Sending {}", message);
-      eventBus.request("my.request.address", message, reply -> {
-        LOG.debug("Response: {}", reply.result());
+      eventBus.<String>request(ADDRESS, message, reply -> {
+        LOG.debug("Response: {}", reply.result().body());
       });
 
     }
@@ -33,9 +34,15 @@ public class RequestResponseExample {
   }
 
   static class ResponseVerticle extends AbstractVerticle {
+    private static final Logger LOG = LoggerFactory.getLogger(ResponseVerticle.class);
     @Override
     public void start(final Promise<Void> startPromise) throws Exception {
       startPromise.complete();
+      vertx.eventBus().<String>consumer(RequestVerticle.ADDRESS, message ->{
+        LOG.debug("Received message: {}", message.body());
+        message.reply("Received your message, thanks.");
+      });
+
     }
   }
 
