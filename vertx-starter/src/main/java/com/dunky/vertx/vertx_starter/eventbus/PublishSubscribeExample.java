@@ -38,7 +38,7 @@ public class PublishSubscribeExample {
     public void start(final Promise<Void> startPromise){
       startPromise.complete();
       vertx.eventBus().<String>consumer(Publisher.class.getName(), message -> {
-        LOG.debug("message: {}", message);
+        LOG.debug("message: {}", message.body());
       });
     }
   }
@@ -48,7 +48,7 @@ public class PublishSubscribeExample {
     public void start(final Promise<Void> startPromise){
       startPromise.complete();
       vertx.eventBus().<String>consumer(Publisher.class.getName(), message -> {
-        LOG.debug("message: {}", message);
+        LOG.debug("message: {}", message.body());
       });
     }
   }
