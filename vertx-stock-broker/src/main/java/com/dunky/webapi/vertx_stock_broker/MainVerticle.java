@@ -34,17 +34,8 @@ public class MainVerticle extends AbstractVerticle {
     final Router restApi = Router.router(vertx);
 
     // HTTP end-point and request handler
-    restApi.get("/assets").handler(context -> {
-      final JsonArray response = new JsonArray();
-      response
-        .add(new JsonObject().put("symbol", "AAPL"))
-        .add(new JsonObject().put("symbol", "AMZN"))
-        .add(new JsonObject().put("symbol", "NFLX"))
-        .add(new JsonObject().put("symbol", "TSLA"));
+    AssetsRespApi.attach(restApi);
 
-      LOG.info("Path {} responds with {}", context.normalizedPath(), response.encode());
-      context.response().end(response.toBuffer());
-    });
 
     vertx.createHttpServer()
       .requestHandler(restApi)
