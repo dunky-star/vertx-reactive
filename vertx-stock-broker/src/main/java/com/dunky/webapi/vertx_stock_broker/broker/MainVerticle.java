@@ -1,6 +1,9 @@
 package com.dunky.webapi.vertx_stock_broker.broker;
 
 import com.dunky.webapi.vertx_stock_broker.broker.assets.AssetsRespApi;
+import com.dunky.webapi.vertx_stock_broker.broker.quotes.QuotesRestApi;
+import com.dunky.webapi.vertx_stock_broker.broker.quotes.QuotesRestApi;
+import com.dunky.webapi.vertx_stock_broker.broker.watchlist.WatchListRestApi;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
 import io.vertx.core.Promise;
@@ -41,6 +44,8 @@ public class MainVerticle extends AbstractVerticle {
 
     // HTTP end-point and request handler
     AssetsRespApi.attach(restApi);
+    QuotesRestApi.attach(restApi);
+    WatchListRestApi.attach(restApi);
 
 
     vertx.createHttpServer()
