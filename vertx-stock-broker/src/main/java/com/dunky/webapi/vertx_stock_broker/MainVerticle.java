@@ -13,15 +13,15 @@ public class MainVerticle extends AbstractVerticle {
   public static void main(String[] args) {
     var vertx = Vertx.vertx();
     vertx.exceptionHandler(error -> {
-      LOG.error("Unhandled: {} ", error);
+      LOG.error("Unhandled: ", error);
     });
 
     vertx.deployVerticle(new MainVerticle(), ar -> {
       if(ar.failed()){
-        LOG.error("Falied to deploy: {}", ar.cause() );
+        LOG.error("Falied to deploy: ", ar.cause() );
         return;
       }
-      LOG.info("Deployed MainVerticle");
+      LOG.info("Deployed {}", MainVerticle.class.getName());
     });
   }
 
