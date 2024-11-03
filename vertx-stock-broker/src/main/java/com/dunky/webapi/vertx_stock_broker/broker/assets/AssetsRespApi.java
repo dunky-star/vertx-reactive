@@ -1,7 +1,6 @@
 package com.dunky.webapi.vertx_stock_broker.broker.assets;
 
 import io.vertx.core.json.JsonArray;
-import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
