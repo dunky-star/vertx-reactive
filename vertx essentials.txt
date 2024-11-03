@@ -2,4 +2,10 @@ start.vertx.io
 
 https://logging.apache.org/  --> For Logging in Vert.x
 
+./gradlew clean assemble --> building Vertx application for a fat jar
+java -jar build/libs/vertex-starter-1.0.0-SNAPSHOT-fat.jar
 ./gradlew clean build
+
+group = "com.dunky.vertx"
+val mainVerticleName = "com.dunky.vertx.vertx_starter.MainVerticle"
+val jacksonVersion = "2.17.1"

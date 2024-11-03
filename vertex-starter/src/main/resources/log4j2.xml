@@ -7,7 +7,7 @@
   </Appenders>
   <Loggers>
 
-    <Logger name="com.dunky.vertex" level="DEBUG" />
+    <Logger name="com.dunky.vertex" level="INFO" />
 
     <Root level="INFO">
       <AppenderRef ref="Console"/>
