@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dunky.vertex.vertex_starter.json.JsonObjectExampleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-03T03:04:03" hostname="DUNKY-KALIGS" time="0.36">
+<testsuite name="com.dunky.vertex.vertex_starter.json.JsonObjectExampleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-03T03:12:32" hostname="DUNKY-KALIGS" time="0.38">
   <properties/>
-  <testcase name="canMapJavaObjects()" classname="com.dunky.vertex.vertex_starter.json.JsonObjectExampleTest" time="0.36"/>
+  <testcase name="canMapJavaObjects()" classname="com.dunky.vertex.vertex_starter.json.JsonObjectExampleTest" time="0.38"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

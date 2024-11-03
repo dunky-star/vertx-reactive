@@ -5,6 +5,11 @@ public class Person {
   private String name;
   private boolean lovesVertex;
 
+  // Required by Jackson XML
+  public Person() {
+
+  }
+
   public Person(Integer id, String name, boolean lovesVertex) {
     this.id = id;
     this.name = name;
