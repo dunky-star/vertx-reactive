@@ -5,6 +5,7 @@ plugins {
   java
   application
   id("com.github.johnrengelman.shadow") version "7.1.2"
+  id("io.spring.dependency-management") version "1.1.5"
 }
 
 group = "com.dunky.vertex"
@@ -28,14 +29,16 @@ application {
   mainClass.set(launcherClassName)
 }
 
+dependencyManagement {
+  imports {
+    mavenBom("org.apache.logging.log4j:log4j-bom:2.23.1")
+  }
+}
 
 dependencies {
-  // Use Vert.x platform for dependency versions
-  implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-
   // Vert.x core dependency
-  implementation("io.vertx:vertx-core")
-
+  implementation("io.vertx:vertx-core:$vertxVersion")
+ 
   // Jackson Databind dependency
   implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 
@@ -47,9 +50,8 @@ dependencies {
   implementation("org.apache.logging.log4j:log4j-api")
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
-
-  // SLF4J dependency
   implementation("org.slf4j:slf4j-api:1.7.36")
+
 }
 
 java {
