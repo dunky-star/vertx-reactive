@@ -28,6 +28,7 @@ application {
   mainClass.set(launcherClassName)
 }
 
+
 dependencies {
   // Use Vert.x platform for dependency versions
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))

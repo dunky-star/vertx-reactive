@@ -20,6 +20,7 @@ public class JsonObjectExampleTest {
     myJsonObject.put("loves_vertx", true);
 
     final String encoded = myJsonObject.encode();
+    
     assertEquals("{\"id\":1,\"name\":\"Dunky\",\"loves_vertx\":true}", encoded);
 
     final JsonObject decodedJsonObject = new JsonObject(encoded);
