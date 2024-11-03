@@ -38,7 +38,7 @@ dependencyManagement {
 dependencies {
   // Vert.x core dependency
   implementation("io.vertx:vertx-core:$vertxVersion")
- 
+
   // Jackson Databind dependency
   implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 
