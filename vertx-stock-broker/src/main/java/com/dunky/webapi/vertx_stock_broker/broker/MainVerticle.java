@@ -4,6 +4,7 @@ import com.dunky.webapi.vertx_stock_broker.broker.assets.AssetsRespApi;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import io.vertx.core.Vertx;
+import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,19 @@ public class MainVerticle extends AbstractVerticle {
   public void start(Promise<Void> startPromise) throws Exception {
     // Router
     final Router restApi = Router.router(vertx);
+
+    // Route error handling
+    restApi.route().failureHandler(errorContext -> {
+      if (errorContext.response().ended()) {
+        // Ignore completed response
+        return;
+      }
+
+      LOG.error("Route Error:", errorContext.failure());
+      errorContext.response()
+        .setStatusCode(500)
+        .end(new JsonObject().put("message", "Something went wrong!").encode());
+    });
 
     // HTTP end-point and request handler
     AssetsRespApi.attach(restApi);
