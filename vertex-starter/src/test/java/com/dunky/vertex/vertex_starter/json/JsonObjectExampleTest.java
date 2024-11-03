@@ -20,7 +20,7 @@ public class JsonObjectExampleTest {
     myJsonObject.put("loves_vertx", true);
 
     final String encoded = myJsonObject.encode();
-    
+
     assertEquals("{\"id\":1,\"name\":\"Dunky\",\"loves_vertx\":true}", encoded);
 
     final JsonObject decodedJsonObject = new JsonObject(encoded);
@@ -52,18 +52,18 @@ public class JsonObjectExampleTest {
     assertEquals("[{\"id\":1},{\"id\":2},{\"id\":3},\"randomValue\"]", myJsonArray.encode());
   }
 
-//  @Test
-//  void canMapJavaObjects() {
-//    final Person person = new Person(1, "Alice", true);
-//    final JsonObject alice = JsonObject.mapFrom(person);
-//    assertEquals(person.getId(), alice.getInteger("id"));
-//    assertEquals(person.getName(), alice.getString("name"));
-//    assertEquals(person.isLovesVertx(), alice.getBoolean("lovesVertx"));
-//
-//    final Person person2 = alice.mapTo(Person.class);
-//    assertEquals(person.getId(), person2.getId());
-//    assertEquals(person.getName(), person2.getName());
-//    assertEquals(person.isLovesVertx(), person2.isLovesVertx());
-//  }
+  @Test
+  void canMapJavaObjects() {
+    final Person person = new Person(1, "Duncan", true);
+    final JsonObject dunky = JsonObject.mapFrom(person);
+    assertEquals(person.getId(), dunky.getInteger("id"));
+    assertEquals(person.getName(), dunky.getString("name"));
+    assertEquals(person.isLovesVertex(), dunky.getBoolean("lovesVertex"));
+
+    final Person person2 = dunky.mapTo(Person.class);
+    assertEquals(person.getId(), person2.getId());
+    assertEquals(person.getName(), person2.getName());
+    assertEquals(person.isLovesVertex(), person2.isLovesVertex());
+  }
 
 }
