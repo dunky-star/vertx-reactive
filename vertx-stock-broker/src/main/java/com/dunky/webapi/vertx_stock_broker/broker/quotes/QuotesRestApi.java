@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 import com.dunky.webapi.vertx_stock_broker.broker.assets.Asset;
+import com.dunky.webapi.vertx_stock_broker.broker.assets.AssetsRestApi;
 import io.vertx.ext.web.Router;
 
 import io.vertx.sqlclient.Pool;

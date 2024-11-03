@@ -11,6 +11,7 @@ import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
+import io.vertx.ext.web.handler.BodyHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,7 +41,9 @@ public class MainVerticle extends AbstractVerticle {
     final Router restApi = Router.router(vertx);
 
     // Route error handling
-    restApi.route().failureHandler(handleFailure());
+    restApi.route()
+      .handler(BodyHandler.create())
+      .failureHandler(handleFailure());
 
     // HTTP end-point and request handler
     AssetsRespApi.attach(restApi);

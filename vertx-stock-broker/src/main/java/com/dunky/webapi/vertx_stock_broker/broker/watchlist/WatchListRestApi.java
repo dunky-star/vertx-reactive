@@ -3,7 +3,6 @@ package com.dunky.webapi.vertx_stock_broker.broker.watchlist;
 import java.util.HashMap;
 import java.util.UUID;
 
-import com.dunky.webapi.vertx_stock_broker.broker.watchlist.WatchList.WatchList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

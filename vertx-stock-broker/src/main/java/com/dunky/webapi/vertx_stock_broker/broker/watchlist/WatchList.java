@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker.watchlist.WatchList;
+package com.dunky.webapi.vertx_stock_broker.broker.watchlist;
 import com.dunky.webapi.vertx_stock_broker.broker.assets.Asset;
 import io.vertx.core.json.JsonObject;
 import lombok.AllArgsConstructor;
