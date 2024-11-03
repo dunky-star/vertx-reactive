@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dunky.vertex.vertex_starter.FuturePromiseExample" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-11-03T05:03:33" hostname="DUNKY-KALIGS" time="4.519">
+  <properties/>
+  <testcase name="future_coordination(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.899"/>
+  <testcase name="future_composition(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.577"/>
+  <testcase name="future_success(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.563"/>
+  <testcase name="promise_success(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.535"/>
+  <testcase name="future_failure(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.555"/>
+  <testcase name="future_map(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.833"/>
+  <testcase name="promise_failure(Vertx, VertxTestContext)" classname="com.dunky.vertex.vertex_starter.FuturePromiseExample" time="0.546"/>
+  <system-out><![CDATA[?[34m22:03:34.162?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Another task
+?[34m22:03:34.170?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Even more
+?[34m22:03:34.191?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Server started on port 10000
+?[34m22:03:34.809?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Success
+?[34m22:03:34.853?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Start
+?[34m22:03:35.357?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Result: Success
+?[34m22:03:35.359?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Timer done.
+?[34m22:03:35.419?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Start
+?[34m22:03:35.420?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - End
+?[34m22:03:35.921?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Success
+?[34m22:03:35.953?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Start
+?[34m22:03:36.455?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Result: 
+java.lang.RuntimeException: Failed!
+	at com.dunky.vertex.vertex_starter.FuturePromiseExample.lambda$future_failure$4(FuturePromiseExample.java:68) ~[test/:?]
+	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.handle(VertxImpl.java:1087) [vertx-core-4.5.10.jar:4.5.10]
+	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.handle(VertxImpl.java:1058) [vertx-core-4.5.10.jar:4.5.10]
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328) [vertx-core-4.5.10.jar:4.5.10]
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:321) [vertx-core-4.5.10.jar:4.5.10]
+	at io.vertx.core.impl.ContextInternal.emit(ContextInternal.java:200) [vertx-core-4.5.10.jar:4.5.10]
+	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.run(VertxImpl.java:1076) [vertx-core-4.5.10.jar:4.5.10]
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) [netty-transport-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.111.Final.jar:4.1.111.Final]
+	at java.base/java.lang.Thread.run(Thread.java:833) [?:?]
+?[34m22:03:36.469?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Timer done.
+?[34m22:03:36.514?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Start
+?[34m22:03:37.016?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Map String to JsonObject
+?[34m22:03:37.240?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Result: [{"key":"Success"}] of type JsonArray
+?[34m22:03:37.240?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Timer done.
+?[34m22:03:37.347?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Start
+?[34m22:03:37.348?[m [Test worker] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - End
+?[34m22:03:37.849?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.d.v.v.FuturePromiseExample?[m - Failed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -38,13 +38,14 @@ dependencyManagement {
 dependencies {
   // Vert.x core dependency
   implementation("io.vertx:vertx-core:$vertxVersion")
+  implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
 
   // Jackson Databind dependency
   implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 
   // JUnit and Vert.x JUnit integration for testing
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
-  testImplementation("io.vertx:vertx-junit5")
+  testImplementation("io.vertx:vertx-junit5") // Vert.x JUnit 5 extension
 
   // Log4j dependencies
   implementation("org.apache.logging.log4j:log4j-api")
