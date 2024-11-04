@@ -13,7 +13,7 @@ import io.vertx.sqlclient.Pool;
 
 public class QuotesRestApi {
 
-  public static void attach(Router parent) {
+  public static void attach(Router parent, Pool db) {
     final Map<String, Quote> cachedQuotes = new HashMap<>();
     AssetsRestApi.ASSETS.forEach(symbol ->
       cachedQuotes.put(symbol, initRandomQuote(symbol))

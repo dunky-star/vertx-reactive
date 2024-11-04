@@ -2,6 +2,7 @@ package com.dunky.webapi.broker;
 import com.dunky.webapi.broker.assets.AssetsRestApi;
 import com.dunky.webapi.broker.config.BrokerConfig;
 import com.dunky.webapi.broker.config.ConfigLoader;
+import com.dunky.webapi.broker.db.migration.DBPools;
 import com.dunky.webapi.broker.quotes.QuotesRestApi;
 import com.dunky.webapi.broker.watchlist.WatchListRestApi;
 import org.slf4j.Logger;

@@ -70,6 +70,12 @@
       <version>42.7.3</version>
       <scope>runtime</scope>
     </dependency>
+    <!-- Depending on your db you need driver 1 or 2 -->
+    <!-- 1 - reactive postgres client -->
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-pg-client</artifactId>
+    </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
