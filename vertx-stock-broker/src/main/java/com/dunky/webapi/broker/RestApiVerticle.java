@@ -1,7 +1,9 @@
-package com.dunky.webapi.vertx_stock_broker.broker;
-import com.dunky.webapi.vertx_stock_broker.broker.assets.AssetsRestApi;
-import com.dunky.webapi.vertx_stock_broker.broker.quotes.QuotesRestApi;
-import com.dunky.webapi.vertx_stock_broker.broker.watchlist.WatchListRestApi;
+package com.dunky.webapi.broker;
+import com.dunky.webapi.broker.assets.AssetsRestApi;
+import com.dunky.webapi.broker.config.BrokerConfig;
+import com.dunky.webapi.broker.config.ConfigLoader;
+import com.dunky.webapi.broker.quotes.QuotesRestApi;
+import com.dunky.webapi.broker.watchlist.WatchListRestApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.vertx.core.AbstractVerticle;

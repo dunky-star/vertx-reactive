@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker.assets;
+package com.dunky.webapi.broker.assets;
 
 import java.util.concurrent.ThreadLocalRandom;
 

@@ -1,6 +1,5 @@
-package com.dunky.webapi.vertx_stock_broker.broker;
+package com.dunky.webapi.broker;
 
-import com.dunky.webapi.vertx_stock_broker.broker.assets.AssetsRespApi;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import io.vertx.core.Vertx;

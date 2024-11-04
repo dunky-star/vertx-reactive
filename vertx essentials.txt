@@ -9,3 +9,6 @@ java -jar build/libs/vertex-starter-1.0.0-SNAPSHOT-fat.jar
 group = "com.dunky.vertx"
 val mainVerticleName = "com.dunky.vertx.vertx_starter.MainVerticle"
 val jacksonVersion = "2.17.1"
+
+
+Load Test: Using Vegeta

@@ -1,6 +1,6 @@
-package com.dunky.webapi.vertx_stock_broker.broker.quotes;
+package com.dunky.webapi.broker.quotes;
 
-import com.dunky.webapi.vertx_stock_broker.broker.assets.Asset;
+import com.dunky.webapi.broker.assets.Asset;
 import io.vertx.core.json.JsonObject;
 import lombok.Builder;
 import lombok.Value;

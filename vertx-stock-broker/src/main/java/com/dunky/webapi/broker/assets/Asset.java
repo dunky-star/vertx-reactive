@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker.assets;
+package com.dunky.webapi.broker.assets;
 
 public class Asset {
   private final String name;

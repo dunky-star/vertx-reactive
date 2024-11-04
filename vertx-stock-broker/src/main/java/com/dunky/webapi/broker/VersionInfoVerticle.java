@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker;
+package com.dunky.webapi.broker;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

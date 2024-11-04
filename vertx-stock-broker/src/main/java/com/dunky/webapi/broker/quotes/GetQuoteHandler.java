@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker.quotes;
+package com.dunky.webapi.broker.quotes;
 import java.util.Map;
 import java.util.Optional;
 

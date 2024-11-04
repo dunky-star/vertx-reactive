@@ -1,20 +1,13 @@
-package com.dunky.webapi.vertx_stock_broker.broker.assets;
+package com.dunky.webapi.broker.assets;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.dunky.webapi.vertx_stock_broker.AbstractRestApiTest;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.netty.handler.codec.http.HttpHeaderValues;
-import io.vertx.core.Vertx;
-import io.vertx.core.http.HttpHeaders;
-import io.vertx.ext.web.client.WebClient;
-import io.vertx.ext.web.client.WebClientOptions;
 import io.vertx.junit5.VertxExtension;
-import io.vertx.junit5.VertxTestContext;
 
 @ExtendWith(VertxExtension.class)
 public class TestAssetsRestApi extends AbstractRestApiTest {

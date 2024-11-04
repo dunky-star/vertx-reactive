@@ -1,4 +1,4 @@
-package com.dunky.webapi.vertx_stock_broker.broker.watchlist;
+package com.dunky.webapi.broker.watchlist;
 
 import java.util.HashMap;
 import java.util.Optional;
