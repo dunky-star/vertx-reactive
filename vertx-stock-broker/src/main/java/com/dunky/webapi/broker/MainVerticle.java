@@ -1,5 +1,7 @@
 package com.dunky.webapi.broker;
 
+import com.dunky.webapi.broker.config.ConfigLoader;
+import com.dunky.webapi.broker.db.migration.FlywayMigration;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import io.vertx.core.Vertx;

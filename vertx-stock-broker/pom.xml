@@ -21,6 +21,7 @@
     <junit-jupiter.version>5.9.1</junit-jupiter.version>
     <jackson-databind.version>2.15.0</jackson-databind.version>
     <lombok.version>1.18.32</lombok.version>
+    <flyway-core.version>9.22.3</flyway-core.version>
 
     <main.verticle>com.dunky.webapi.vertx_stock_broker.MainVerticle</main.verticle>
     <launcher.class>io.vertx.core.Launcher</launcher.class>
@@ -54,6 +55,12 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-config-yaml</artifactId>
+    </dependency>
+    <!-- Database Migration -->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>${flyway-core.version}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
